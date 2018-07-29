@@ -14,7 +14,7 @@ class HelloSatefull extends Component {
     render() {
         return (
             <div> 
-                <button onClick={this.sayHi.bind(this)}> Hello</button>
+                <button onClick={this.sayHi.bind(this)}> Hello {this.props.name}</button>
             </div>
             );
     }

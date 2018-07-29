@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import HelloWorld from './component/HelloStateless';
 import HelloSatefull from './component/HelloStatefull';
+import StateClock from './component/StateExample';
 
 class App extends Component {
   render() {
@@ -17,6 +18,7 @@ class App extends Component {
         </p>
         <HelloWorld />
         <HelloSatefull title='Mr' name='Satish'/>
+        <StateClock />
         
       </div>
     );
