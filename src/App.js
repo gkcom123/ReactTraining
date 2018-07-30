@@ -4,9 +4,11 @@ import './App.css';
 import HelloWorld from './component/HelloStateless';
 import HelloSatefull from './component/HelloStatefull';
 import StateClock from './component/StateExample';
+import NestingExample from './component/NestingExample';
 
 class App extends Component {
   render() {
+    const obj = {name:'Satish', 'Age': 25, active: true};
     return (
       <div className="App">
         <header className="App-header">
@@ -19,7 +21,7 @@ class App extends Component {
         <HelloWorld />
         <HelloSatefull title='Mr' name='Satish'/>
         <StateClock />
-        
+        <NestingExample statement='This is for child' propObj = {obj}/>
       </div>
     );
   }

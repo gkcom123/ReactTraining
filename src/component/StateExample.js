@@ -2,13 +2,13 @@ import React,{Component} from 'react';
  
 class StateClock extends Component{
     constructor(props) {
-        console.log('constructor');
+        //console.log('constructor');
         super(props);
         this.state = {date: new Date()};
         
     }
     componentDidMount() {
-        console.log('componentDidMount');
+        //console.log('componentDidMount');
         this.timerID = setInterval(() =>this.tick(),1000);
     }
     componentDidUpdate(prevProps, prevState,snapshot){
@@ -18,7 +18,7 @@ class StateClock extends Component{
         // }
     }
     shouldComponentUpdate(prevProps, prevState) {
-        console.log(this.state.date);
+        //console.log(this.state.date);
         //if()
         return false;
     }
