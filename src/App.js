@@ -5,6 +5,7 @@ import HelloWorld from './component/HelloStateless';
 import HelloSatefull from './component/HelloStatefull';
 import StateClock from './component/StateExample';
 import NestingExample from './component/NestingExample';
+import ContextDemo from './component/ContextDemo';
 
 class App extends Component {
   render() {
@@ -22,6 +23,8 @@ class App extends Component {
         <HelloSatefull title='Mr' name='Satish'/>
         <StateClock />
         <NestingExample statement='This is for child' propObj = {obj}/>
+        {/**/}
+        <ContextDemo/>
       </div>
     );
   }
