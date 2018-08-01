@@ -6,6 +6,9 @@ import HelloSatefull from './component/HelloStatefull';
 import StateClock from './component/StateExample';
 import NestingExample from './component/NestingExample';
 import ContextDemo from './component/ContextDemo';
+import { SucessLabel, ErrrorLabel } from './component/inheritanceDemo';
+import { SucessLabel2, ErrrorLabel2 } from './component/CompositionDemo';
+import WrappedComponent from './component/hoc/BaseEmp';
 
 class App extends Component {
   render() {
@@ -19,12 +22,20 @@ class App extends Component {
         <p className="App-intro">
           Welcome Satish
         </p>
-        <HelloWorld />
+        {/* <HelloWorld />
         <HelloSatefull title='Mr' name='Satish'/>
         <StateClock />
-        <NestingExample statement='This is for child' propObj = {obj}/>
+        <NestingExample statement='This is for child' propObj = {obj}/> */}
         {/**/}
-        <ContextDemo/>
+        {/* <ContextDemo/> */}
+
+        {/* <SucessLabel> This is success</SucessLabel>
+        <ErrrorLabel>This is error</ErrrorLabel>
+        <SucessLabel2> this is success Composition </SucessLabel2>
+        <ErrrorLabel2> this is error Composition </ErrrorLabel2> */}
+
+        <WrappedComponent/>
+        
       </div>
     );
   }

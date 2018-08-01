@@ -1,0 +1,14 @@
+.plain-label{
+    font-size: 16px;
+    background: #f5f5f5;
+    border: 1px solid #333333;
+    padding: 4px 8px;
+}
+.success-label {
+    background: green;
+    color: white;
+}
+.error-label {
+    background: red;
+    color: white;
+}
