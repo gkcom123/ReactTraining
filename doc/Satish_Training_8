@@ -1,0 +1,16 @@
+Inheritance: Demo
+   Label (basic text)
+	|
+Success (Extend and provide some more feature) Error (Extend and Something different)
+
+{this.props.children}: react provided attribute, So that we can use it inside html 
+it refers to all the things which comes inside Tags <label>childen</label>
+
+High Order Component:
+This is adding an extra feature
+
+Employee Class
++ 
+Position Director
+
+https://babeljs.io/docs/en/learn/

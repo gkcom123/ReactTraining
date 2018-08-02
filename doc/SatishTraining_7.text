@@ -1,0 +1,45 @@
+Context API: 
+We can many Context
+Provider: pass the data to store
+Consumer: Consume the stored data
+
+We dont have to pass props through parent in this case
+
+High Order Component : 
+
+Component => Component 
+
+Label 
+
+Success : Green label+ u r successful
+Error: Red Label
+
+Const ImprovedComponet = higherOrderComponent(wrappedComponent);
+
+1. Does not modify the input component
+2. it is not ineritance
+
+HOC : composes the original component by wrapping it in a container component.
+Pure function with zero side effect
+
+Props: All props from wrapped component + data (which it will use to render the new output)
+
+data: HOC is not concerned from source of data, 
+
+Compoent 
+
+logger functionality 
+ComponentWithLogs = Logger(original component)
+Ex: Logger 
+
+render Method: Dont use this
+---
+Staeless
+Statefull
+Context
+inheritance/Composition
+HOC: Example is Pending
+====
+functions: Event management like onCLick, onChange,
+
+

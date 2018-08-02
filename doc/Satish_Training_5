@@ -1,0 +1,41 @@
+Nesting of Component
+ Use of one component inside another
+
+ List Component : List of things 
+ Dropdown
+
+ ListComponent
+ DropDown
+ TextComponent
+ ---> Have a component as small as possible
+ imporve reusability 
+ Testing is easy: Once u verify the component seperately , You dont need to write/test that component in integration testing
+
+ Ex: List component contains Dropdown/Text. 
+
+ Composition and inheritance of component
+ Parent/Child
+
+ Based on user input : Display button/Text, Chilndren props
+ Inheritance: Inherit the property of child component 
+ 	Button and 
+
+=====
+App.js -> Message for child-> Parents receives -> pass the message to the child (NestingChildEx)
+whatever is getting = will come as props
+---
+Context: Use it when we have a scenario where you have to pass attributes directly to the child component.
+
+Use a global variable defined by React, It uses the concept of Store: 
+Store is available at all level of componets
+
+Subscriber and consumer
+
+App (Create a context here) -Nesting-NestingChild (added as a Consumer)
+
+During context creation, We place the value in a global varibale . 
+Format of Object : Key: Value 
+Key Attribute will be uniqly NestingLevel1
+Key : should be always unique, Replace the old values
+CreateContext: It will create a context with a given value
+

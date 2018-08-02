@@ -1,0 +1,21 @@
+
+Stateless Component
+Statefull Component : You can add react lifecyle method here, Create by extending Class
+Should be used when you want to keep state with component
+
+Stateless const HelloStateless = ({name}) => {
+	const sayHi = (event) => {
+propTypes:
+Define this for possible props
+
+HelloSatefull.propTypes = {
+//     name: PropTypes.string.isRequired,
+//     title: PropTypes.string.isRequired
+// }
+
+isRequired: This is for mandatory props, if not given, It would be treated as optional
+// HelloSatefull.defaultProps = {
+// 	name:'Sa
+
+Default Props: is required if u want to have a default value
+ToDO: Stateless isrequired not working

@@ -1,0 +1,30 @@
+pass the function ; call a function from parent to child
+
+Child : fire an event 
+and u should take action based on childs events. 
+
+this.props.funcationName will get called in parent class and we need to handle there. 
+
+Always bind the function if its not in ES6
+But for pure java script : Bind the function 
+this.func = this.func.bind(this);
+
+Check the status on child component : by passing the object with function call. 
+
+initilize : this.state= {
+            justClicked:null,
+        }
+
+set the new value : this.setState
+
+U can use just text to print that in browser, It will internally add the span tag
+Use the curly braces: {to print the value}
+
+On each state change : UI gets re rendered. But when it gets rerendered: We dont know
+React automatically combine all the changes and re-render the UI.
+
+Before UI renders the Cmponent again, it will ask the shouldCompoenntUpdate: T/F
+key: Unique value in UI
+Its very import for rendering perspective
+Array: 10 
+	<Button key{index}></Button>

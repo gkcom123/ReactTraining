@@ -1,0 +1,98 @@
+cmd
+node --version
+npm will be installed together
+npm is installed with Node.js
+npm is distributed with Node.js- which means that when you download Node.js, you automatically get npm installed on your computer.
+-----
+yarn
+-------
+Step 2: 
+https://github.com/facebook/create-react-app
+npm install -g create-react-app
+
+create-react-app <Name of the projecT>
+Ex: create-react-app demoproject
+
+Folder St: 
+node_modules: Which will come once you do npm install
+If node_modules is not available: then do npm install
+
+----
+package.json:
+<dependecies>
+<devdependecies>
+---
+registration: 
+Css: by page name
+registration.css
+registration.html
+login.html
+login.css
+---
+Website : Group of components
+Ex: Left panel, One Text INput, One Submit Button
+Left Panel: Component
+Text Input : Component
+Submit Button: Component
+----
+Combine Together: Block : website
+Left Panel: List of Employee name: 
+	1. List component 
+
+---
+Project Has 2 page
+Employee List page:
+	List, Button
+		2 common compoennt
+
+Employee Data
+	Text Input, Dropdown, Button
+	TextInput.component.js
+	Dropdiwn.component
+
+HobbyList
+	List Data
+	1 common component
+
+Common Component: Button.js, List.component.js/List.js
+									import Button.js
+--------------
+--------------
+--------------
+
+import React, { Component } from 'react';
+
+class Dropdown extends Component {
+	render() {
+		return (
+			<div>
+			
+			</div>
+			)
+	}
+
+}
+
+export default Dropdown;
+
+Flow
+Index.js
+index.html
+app.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
