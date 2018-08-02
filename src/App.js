@@ -9,8 +9,23 @@ import ContextDemo from './component/ContextDemo';
 import { SucessLabel, ErrrorLabel } from './component/inheritanceDemo';
 import { SucessLabel2, ErrrorLabel2 } from './component/CompositionDemo';
 import WrappedComponent from './component/hoc/BaseEmp';
+import Notification from './FunctionCallDemo';
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.onNotificationClose = this.onNotificationClose.bind(this);
+  }
+  onNotificationClose(obj) {
+    console.log(obj);
+    if(obj.status==='Submitted'){
+      alert(' Form has been submitted');
+    }
+    else{
+      alert(' Form has been failed');
+    }
+    //alert('i m in parent');
+  }
   render() {
     const obj = {name:'Satish', 'Age': 25, active: true};
     return (
@@ -35,6 +50,7 @@ class App extends Component {
         <ErrrorLabel2> this is error Composition </ErrrorLabel2> */}
 
         <WrappedComponent/>
+        <Notification onClose= {this.onNotificationClose} />
         
       </div>
     );
