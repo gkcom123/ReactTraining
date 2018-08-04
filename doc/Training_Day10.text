@@ -1,0 +1,73 @@
+PureComponent: 
+Similar to Component, mplement shouldComponentUpdate but with a shallow prop and state comparison.
+
+shouldCompoennt() {
+	//does shallow comparioson two object
+	compare object id of 2 object
+}
+
+//shallow comparison
+const value = 'abc';
+const item1 = value;
+const item2 = value;
+
+console.log(item1===item2);
+
+const value = 'abc';
+const array1 = [value];
+const array2 = [value];
+ console.log(item1===item2);//false
+
+ //deep equality check
+ array1.forEach((item,index)=>{
+ 	array1[index]===array2[index];
+
+ });
+
+When we use PureComponent:
+for performance imporvement, render function returns the same result given the same props and state. 
+
+
+
+ShouldCompoentCompoent : return false
+===========================================
+Whatever value it has, it will be available in this.props
+Whatever value it is going to render: It would be available in nextPorps
+shouldComponentUpdate(nextProps){
+        if(this.props.message===nextProps.me)
+    }
+    =========================================
+Setup part: 
+4 API : GET,POST,PUT,DELETE,PATCH
+
+
+---
+Node Server Setup: Node JS in backend
+Service: Java, Python , c#
+return struture JSON
+REST API : response 
+---
+Node JS API: express framework
+body-parser: Rest API request and response API
+express-delay: Network delay: fake that up, i am going to produce delay 1s
+i am going to run on API on port 5000: 
+localhost:5000/api/
+
+UI is running on 3000 port and ur service are running on 5000
+CORS: issue
+Access-Control-allow-origin *
+-----
+express 
+body-parser
+express-delay
+---
+installation steps
+
+npm install --save express
+
+
+
+
+
+
+

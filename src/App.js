@@ -10,6 +10,7 @@ import { SucessLabel, ErrrorLabel } from './component/inheritanceDemo';
 import { SucessLabel2, ErrrorLabel2 } from './component/CompositionDemo';
 import WrappedComponent from './component/hoc/BaseEmp';
 import Notification from './FunctionCallDemo';
+import PureComponentDemo from './component/pure-compoent/PureComponentDemo';
 
 class App extends Component {
   constructor(props){
@@ -49,8 +50,9 @@ class App extends Component {
         <SucessLabel2> this is success Composition </SucessLabel2>
         <ErrrorLabel2> this is error Composition </ErrrorLabel2> */}
 
-        <WrappedComponent/>
-        <Notification onClose= {this.onNotificationClose} />
+        {/* <WrappedComponent/>
+        <Notification onClose= {this.onNotificationClose} /> */}
+        <PureComponentDemo/>
         
       </div>
     );
