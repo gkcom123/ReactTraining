@@ -64,6 +64,11 @@ express-delay
 installation steps
 
 npm install --save express
+npm install --save body-parser
+npm install --save express-delay
+
+
+
 
 
 
