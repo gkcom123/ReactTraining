@@ -1,0 +1,25 @@
+Server Side code: 
+Backend API
+GET,POST,PUT,DELETE
+
+npm install -g nodemon
+
+Start the server : node server.js / nodemon server.js
+
+React : 
+Call the backend API
+fetch, Axios (Library): helpful for calling service API
+
+where to call API
+1. call when page loads: 
+	ComponentDidMount
+2. On some user action:
+	Button : OnClick event handler
+3. on input change: 
+	onChange event handler
+4.  
+
+To install the axios library
+npm install --save axios
+
+

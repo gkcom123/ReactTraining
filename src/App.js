@@ -11,6 +11,7 @@ import { SucessLabel2, ErrrorLabel2 } from './component/CompositionDemo';
 import WrappedComponent from './component/hoc/BaseEmp';
 import Notification from './FunctionCallDemo';
 import PureComponentDemo from './component/pure-compoent/PureComponentDemo';
+import { FetchDemo } from './component/serviceCall/FetchDemo';
 
 class App extends Component {
   constructor(props){
@@ -53,7 +54,7 @@ class App extends Component {
         {/* <WrappedComponent/>
         <Notification onClose= {this.onNotificationClose} /> */}
         <PureComponentDemo/>
-        
+        <FetchDemo/>
       </div>
     );
   }
