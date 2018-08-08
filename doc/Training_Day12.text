@@ -1,0 +1,36 @@
+Post data:
+We want to pass the data as in body with request
+For both Post and put
+
+FETCH API: when you want to call any other than GET, You need to specify it
+
+There are 2 ways to call API
+1. fetch: already provided by React
+2. Axios: install and use it
+npm install --save axios
+import it
+axios.get('http://localhost:5000/api/userList')
+        .then(res=>{
+            console.log('from Axios', res.data);
+        })
+        const data = {name: 'Demo User', password: 'khjdhj'};
+        axios.post('http://localhost:5000/api/updateUser',data)
+        .then(res=>{
+            console.log('from Axios post call', res.data);
+        })
+  ======
+  How to show data on UI:
+  1. if API call is going: We will show Busy cursor: Loading...
+  	We need to maintain state, once state changes, UI will rerender
+  2. As soon as API call is finished: We will show the result on UI
+
+  Steps:
+  Get one state variable
+  populate the state
+  Change the state on api call
+  Use that state in render method
+  Rerender the UI
+---
+Make one Post/Delete call
+Error Part : How to display server error on UI
+Redux
