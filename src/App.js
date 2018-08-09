@@ -53,7 +53,7 @@ class App extends Component {
 
         {/* <WrappedComponent/>
         <Notification onClose= {this.onNotificationClose} /> */}
-        <PureComponentDemo/>
+        {/* <PureComponentDemo/> */}
         <FetchDemo/>
       </div>
     );

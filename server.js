@@ -36,7 +36,7 @@ app.use(delay(2000));
      var emailId = reqObj["emailId"];
      var name = reqObj["name"];
      const result = {
-        "status": "success",
+        "status": "User updated successfully",
         "data":[{userName:name,status:true}]
     }
     res.send(result);

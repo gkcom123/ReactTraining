@@ -6,8 +6,47 @@ export class FetchDemo extends Component {
         this.state = {
             error: null,
             isAPILoaded: false,
-            users: []
+            users: [],
+            nameText:'',
+            passwordText:'',
+            postCallStatus: null
         }
+        this.searchInterval = 300;
+        //this.onSearchChange = this.onSearchChange.bind(this);
+    }
+    // onSearchChange(event) {
+    //     console.log("Event is triggered");
+    // }
+
+    onNameChange = (event) => {
+        this.setState({nameText:event.target.value})
+    }
+    onPasswordChange = (event) => {
+        this.setState({passwordText:event.target.value})
+    }
+    onSearchChange = (event) =>{
+        clearTimeout(this.searchTimer);
+        this.searchTimer = setTimeout(()=>{
+            fetch("http://localhost:5000/api/userList")
+            .then(res => res.json())
+            .then(
+                (result) =>{
+                    this.setState({
+                        isAPILoaded: false,
+                        users: result.data
+                    })
+                    //console.log(result);
+                },
+                (error) => {
+                    this.setState({
+                        isAPILoaded: false,
+                        error
+                    })
+                    console.log('Error is',error);
+                }
+            )
+        }, this.searchInterval);
+        
     }
     postData = (url=``,data={})=> {
         return fetch(url,{
@@ -25,12 +64,23 @@ export class FetchDemo extends Component {
         .then(response=> response.json())
         .catch(error=> console.error(`Fetch Error=\n`,error));
     }
+    onSubmit = () =>{
+        const name = this.state.nameText;
+        const password = this.state.passwordText;
+        const data = {name, password};
+        this.postData(`http://localhost:5000/api/updateUser`,data)
+        .then(data=> {
+            this.setState({postCallStatus:data.status});
+            console.log(data.status)
+        })
+        .catch(error=> console.error(error))
+    }
     componentDidMount() {
         // Below steps are for Axios, which is a different library 
-        axios.get('http://localhost:5000/api/userList')
-        .then(res=>{
-            //console.log('from Axios get call', res.data);
-        })
+        // axios.get('http://localhost:5000/api/userList')
+        // .then(res=>{
+        //     //console.log('from Axios get call', res.data);
+        // })
         const data = {name: 'Demo User', password: 'khjdhj'};
         axios.post('http://localhost:5000/api/updateUser',data)
         .then(res=>{
@@ -38,24 +88,24 @@ export class FetchDemo extends Component {
         })
 
         // Below steps are for fetch api, which is provided by React
-        fetch("http://localhost:5000/api/userList")
-        .then(res => res.json())
-        .then(
-            (result) =>{
-                this.setState({
-                    isAPILoaded: true,
-                    users: result.data
-                })
-                //console.log(result);
-            },
-            (error) => {
-                this.setState({
-                    isAPILoaded: true,
-                    error
-                })
-                console.log('Error is',error);
-            }
-        )
+        // fetch("http://localhost:5000/api/userList")
+        // .then(res => res.json())
+        // .then(
+        //     (result) =>{
+        //         this.setState({
+        //             isAPILoaded: true,
+        //             users: result.data
+        //         })
+        //         //console.log(result);
+        //     },
+        //     (error) => {
+        //         this.setState({
+        //             isAPILoaded: true,
+        //             error
+        //         })
+        //         console.log('Error is',error);
+        //     }
+        // )
         //This is the POST Call
         this.postData(`http://localhost:5000/api/updateUser`,data)
         .then(data=> console.log(data))
@@ -66,21 +116,29 @@ export class FetchDemo extends Component {
        
         // const isAPILoaded = this.state.isAPILoaded
         //Remove the below sections if api is not returning
-        if(!isAPILoaded) {
+        if(isAPILoaded) {
             return (<div>Loading...</div>)
         }
-        //console.log('---->',error);
+        //console.log('---->',typeof error, error);
         if(error){
-            return <div>Something Wrong...</div>
+            return <div>Something Wrong...{error.toString()}</div>
         }
         return(
-            <ul className="">
-                {users.map((user,index) => (
-                    <li key={index}>
-                        {user.userName}
-                    </li>
-            ))}
-            </ul>
+            <div>
+                <ul className="">
+                    {users.map((user,index) => (
+                        <li key={index}>
+                            {user.userName}
+                        </li>
+                ))}
+                </ul>
+                <input type="search" placeholder="Search" onChange={this.onSearchChange}/>
+                <input type="text" placeholder="Name" onChange={this.onNameChange}/>
+                <input type="password" placeholder="Password" onChange={this.onPasswordChange}/>
+                <button type="Button" onClick={this.onSubmit}> Submit </button>
+                {this.state.postCallStatus ?
+                <span>{this.state.postCallStatus}</span> :''}
+            </div>
         )
     }
 }

@@ -1,0 +1,22 @@
+Error Handling: 
+
+On Change handler, We r going to call API
+oR we can have a button, ONClick: POST/PUT
+
+
+<input type="search" placeholder="Search" onChange={this.onSearchChange}/>
+
+OnChange/Or any event: Get the event handler
+Bind the function: 
+	1. ES6 =>
+	2. bind () method
+iN event handler function, we r going to call API
+
+General rule:
+input box: 1. Have a change handler
+2. In the change handler, place the value in state
+3. use the state value to pass to any other function
+
+On successfu result of API: u change the state of PostcallStatus to get notified about the API call. 
+Once state change: It will re-render
+then have a conditional html element to show the status to user.
