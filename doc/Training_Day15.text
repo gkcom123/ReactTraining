@@ -1,0 +1,103 @@
+Redux: Manage the state of a web application
+
+Main principle:
+1. Single source of truth: One store, All Data present in single store
+2. State tree is read only: Any change in the state is by dispatching an action.
+3.Reducer: We have to write a function which takes previous state, action being dispatched
+and returns a new state. This is a pure function. No call of API in reducer
+
+
+PREV STATE + ACTION => NEW STATE (New Object):
+Managing the store: Update the store
+
+Pure function= Has no side effects: 
+function square (x) {
+	return x*X;
+
+}
+
+impure function : has side effects
+
+function square (x) {
+//update x in database
+	return x*X;
+}
+
+Redux follow pure function concept
+It will not modify the previous state
+It will always produce a new state. 
+
+Array = 5 eleemnt 
+change it , 6 elelment
+Redux: old array with 1 extra element (NO), It creates a new array with 6 element
+
+
+store: emploee data
+{name:emp,age:30}
+emp.name = "new Emp": Read only
+
+
+class Button extends Component{
+	constructor() {
+	this.state = {name:''}
+	}
+	render() {
+	 	return (
+	 	<div>this.state.name<div>)
+	}
+}
+
+2 components : 
+1. List of Emp name and Address: 
+	Updated value:
+2. Form : which can create or Edit Employee
+	New Employee: 
+	1. Pass AN ACTION: CREATE_EMPLOYEE, data {name: new emp,age:30}
+	2. Action : Call an API : data, update its store on successful call. 
+	3. Reducer : call an get API I had previously , 2 EMP + 1 EMP= 3 EMP, I will return a new Object 
+	STORE: 3 EMP
+
+
+	Updated store: Reducer to every page of UI that i have a new version of data, Emp object will get an alert and it will get the new copy. State will change
+	UI will rerender
+	
+
+	1. Pass AN ACTION: EDIT_EMPLOYEE, data {name: new emp,age:30} 
+	2. ACTION: CAll AN API: SUccessful call, ASK reducer : id
+	3. Reducer : 3 EMP: Update its copy and it will send a new copy to user
+
+
+====================
+Important Points:
+refer : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+1. Array : concat method, map method
+2. Delete an element : DONT USE Splice METHOD, Use Slice method
+
+ES6 ... operator 
+
+{values: ...array,{name: new}}
+
+----
+To avoid this: We will write a unit test case for each reducer
+Use Deep-freeze library: Will make sure , old objects are never returned
+If u return old object, test case will fail
+
+Each Reducer will have its own test cases.
+
+--------
+
+STORE: Which manages the state of library
+Connect the store to react : We will use react-redux library
+Subscribe it: 
+
+
+
+
+
+
+
+
+
+
+
