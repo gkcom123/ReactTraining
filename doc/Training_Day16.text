@@ -1,0 +1,14 @@
+Redux Demo
+
+Install the redux
+npm install --save redux
+Component: 
+Dispatching an action
+
++ - 0 
+
+Web App Flow
+index.js->App.js-> Component
+
+in reducers: 
+When you dispatch an action, You need to pass the data and type (mandatory)
