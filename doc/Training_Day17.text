@@ -1,0 +1,68 @@
+Where Redux helps:
+1. manage the state: 
+2. want to have a proper way of data flow
+
+When to use redux: When u want to have a data flow in certian way
+=================================
+<App >
+	<Component >
+		<AnotherComponet/>
+
+		Data will directly come to any component through connect funtion of redux.
+
+Redux: connect to the store and give me data
+=================================
+mapStateToProps: Give me data of store, and map that data to my props
+mapDispatchToProps: Function call
+
+State : data 
+Store : where the data is stored
+=================================
+How do we connect to redux store
+Redux: is independent library, We need another library react-redux
+ 	1. Provider: it will make redux store available to the connect calls in the component hierarchy below
+
+	<Provider store={store}>
+    	<Counter/>
+  	</Provider>
+
+ 	CANT USE Connect without wrapping in Provider
+ 	2. Connect 
+ 		mapStateToProps
+ 		mapDispatchToProps
+ 	
+===============================
+ 	Installation 
+ 	npm install --save react-redux
+
+================================
+4 things we do 
+1. Wrap your componet in Provider
+2. Call Connect from your Component to connect to redux
+3. MapStateToProps: Get you the update store data
+4. MapDispatchToProps: manage the function call
+
+
+export default connect(mapStateToProps,mapDispatchToProps)(Counter);
+Call the connect with mapStateToProps,mapDispatchToProps: returned object 
+PAss the reutrned with counter will produce a new Object: New Component with All Store data and action
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
