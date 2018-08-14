@@ -1,0 +1,43 @@
+To DO List 
+
+import {combineReducers} from 'redux';
+combineReducers: will be combining all reducer of your app and make it available for main entry program
+
+For every feature, Have one reducer file. 
+
+Add that newly created reducer to index.js (of reducers file)
+
+==================
+Reducers:
+1. state should be initialized
+
+Any new reducer should have reference in reducers/index.js also		
+
+We can add inline css as a style attribute.
+Ex: <li style={{textDecoration: completed ?'line-through' : 'none'}}>{text}</li>
+-------------------------------------------
+{textDecoration: completed ?'line-through' : none}
+
+if completed is true =====> {textDecoration: 'line-through'}
+if completed is false =====> {textDecoration: 'none'}
+
+===============
+ex: var obj = {completed: false, text: 'hello'}
+
+{...todo} : spread this object ===> completed: false, text: 'hello'
+
+<Todo key={todo.id} {...todo} />
+
+will be transalated to 
+<Todo key={todo.id} completed=false text='hello'/>
+
+====
+todos : PropTypes.arrayOf (PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        completed: PropTypes.bool.isRequired,
+        text: PropTypes.string.isRequired,
+    }).isRequired).isRequired
+
+
+
+    

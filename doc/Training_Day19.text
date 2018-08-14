@@ -1,0 +1,38 @@
+todos : PropTypes.arrayOf (PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        completed: PropTypes.bool.isRequired,
+        text: PropTypes.string.isRequired,
+    }).isRequired).isRequired
+
+ todos: should be an array, it is required
+ PropTypes.shape: structure of the object: 
+ {key: value}: This object should have minimum 3 attrinutes: id, completed, text
+ It is required Field. 
+
+ ======
+ Once you wrap the content in a form, OnSubmit of the form will get called on buton click
+ ==================
+ Flow of the To DO App
+ ----
+ 1. index.js: Use the Provider to Wrap your basic comopnent called App.
+ 	create a store with rootreducer
+ 		const store = createStore(rootReducer)
+
+ 	Pass the created store to provider.
+ 	
+
+ 2. App will call the Todo compoennt
+ 	a. connect to redux store
+ 		export default connect()(AddTodo)
+ 	b. dispatch will be available to AddTO component when we use react-redux.
+ 	c. Dispatching an action called addTodo with value of input box
+ 		dispatch(addTodo(input.value))
+ 3. Action: 
+ 	Define an action with same same addTodo
+ 	2. Add a type of action: mandatory
+ 	3. Add any other attribute if required
+4. Reducer: 
+	Redux will call the reducer with given type and data
+	a. Main reducer index.js will have all the component's reducer added.
+	b. Go to action type in reducer.
+	c. return new state always
