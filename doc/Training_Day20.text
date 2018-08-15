@@ -1,0 +1,9 @@
+No API call should hape from reducer
+Use Action for API
+
+Core Component: Should never attached Redux, because u r attaching some data to it. 
+
+3 things:
+1. Action
+2. Reducer
+3. Component: connect

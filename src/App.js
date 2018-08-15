@@ -14,6 +14,7 @@ import PureComponentDemo from './component/pure-compoent/PureComponentDemo';
 import AddTodo from './containers/AddTodo';
 import VisibleTodoList from './containers/VisibleTodoList';
 import TodoList from './component/TodoList';
+import Footer from './component/Footer';
 //import { FetchDemo } from './component/serviceCall/FetchDemo';
 
 
@@ -61,6 +62,7 @@ class App extends Component {
         {/* <FetchDemo/> */}
         <AddTodo />
         <VisibleTodoList />
+        <Footer/>
       </div>
     );
   }
