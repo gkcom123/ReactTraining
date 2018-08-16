@@ -5,10 +5,17 @@ export const addTodo = text => ({
     id: nextTodoId++,
     text
 })
+
 export const setVisibilityFilter = filter => ({
     type: 'SET_VISIBILITY_FILTER',
     filter
 })
+
+export const toggleTodo = id =>{ 
+    return {
+    type: 'TOGGLE_TODO',
+    id
+}}
 
 export const VisibilityFilter = {
     SHOW_ALL: 'SHOW_ALL',

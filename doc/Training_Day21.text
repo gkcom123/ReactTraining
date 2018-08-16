@@ -1,0 +1,27 @@
+Once you connect reducer to Component,
+2 things : state, dispatch
+state: all the store value
+dispatch : action required by the store
+
+===
+action 
+if your code is like below
+type: 'ADD_TODO',
+    id: nextTodoId++,
+    text (this means text:text)
+})
+
+in reducer: 1. go to type of event which is ADD_TODO
+2. In that code, you will 2 parameters:
+	a. action.id
+	b. action.text
+
+
+Add an element in ES6
+[...state,
+                {
+                    id:action.id,
+                    text: action.text,
+                    completed:false
+                }
+                ]// new element 
