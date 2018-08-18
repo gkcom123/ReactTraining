@@ -1,0 +1,16 @@
+Reducer:
+Add by feature/add by page  (Decision based on project)
+Add a new Reducer:
+1. 
+2. Create a new file by featureNameReducer.js
+3.Add the reference in entry file. Index.js , export in the combineReducer
+export default combineReducers({
+    todos, visibilityFilter
+})
+3. Add the Events type switch case
+4. Connect to the react application and get the state.
+Viisbility Filter : Adding one more object in Store:
+
+STORE IS ONLY ONE OBJECT
+store : {todos:[{},{}]}
+store: {todos:[],visibilityFilter: Completed}
