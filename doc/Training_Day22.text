@@ -14,3 +14,38 @@ Viisbility Filter : Adding one more object in Store:
 STORE IS ONLY ONE OBJECT
 store : {todos:[{},{}]}
 store: {todos:[],visibilityFilter: Completed}
+-------
+Advance Redux:
+EVENTS-ACTION-REDUCER-CHANGES THE STATE-UI Connect to redux- get alert in component = any chnage in props wiill re-render the UI.
+
+Async Actions:
+Synchronous App (To Do app)-Dispatch an action- state was updated immediately.
+
+Actions: When you call AJAX API, 
+	1. start the call
+	2. receive the data or (timeout)
+
+Without dispatching an action: you cant change the store data
+
+Start the call: UI to show the Busy cursor: It has to change the store data/application state
+				it has to dispatch an action, which will by processed by reducer synchronously. 
+
+Async call:
+1. Start the API call: 	
+	1. Dispatch an action: Ex: ACTION_BEGAN:  type of state (isAPILoaded) gets changes
+		{type:'FETCH_POST_REQUEST'}
+	2.  when request gets completed: Dispach the action again: Reducer will change/update the store data with API result.
+	{type:'FETCH_POST_SUCCESS'}
+	3. Action for failed request
+	{type:'FETCH_POST_FAILED'}
+
+----
+Async Flow
+Example f React redux API call
+REact- Router
+Redux form, form validation
+
+
+
+
+

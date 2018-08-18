@@ -10,7 +10,12 @@ export const setVisibilityFilter = filter => ({
     type: 'SET_VISIBILITY_FILTER',
     filter
 })
-
+//
+// export const callGetAPI= () => {
+//     return {
+//         type:'FETCH_GET_REQUEST'
+//     }
+// }
 export const toggleTodo = id =>{ 
     return {
     type: 'TOGGLE_TODO',
