@@ -1,0 +1,34 @@
+REdux Thunk: Example
+It is a function that wraps an expression to delay its evaluation. 
+let x = 1+2;
+x=3 //immediate execution
+//calculation of 1+2 is delayed
+//foo can be called later to perform the calculation
+//foo is a thunk
+let foo = () => 1+2;
+
+//React -redux
+Action creator -> Object
+Thunk returns -> function
+
+function getAPIResult (obj) {
+	return function(dispatch) {
+		return fetchAPICall().then(
+			data => dispatch(callActionCreator(obj, data))
+			error => dispatch(callActionreator(error))
+		);
+	};
+};
+//useful for server side rendering : once data is available, render the app
+
+//Write an action creator that doesn't create an object, return a function. 
+
+//create a middleware 
+//applymiddleware from redux
+
+React(UI) -> Redux (state management library)
+React(UI) -> MiddleWare-> THUNK->Redux (state management library)
+=====
+
+Redux Promise
+==============

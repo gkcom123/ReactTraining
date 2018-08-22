@@ -1,0 +1,68 @@
+REdux-Thunk: Library
+seTimeout: 
+
+Redux:
+store.dispatch({type:'SHOW_NOTIFICATION', text: 'Logged in'})
+setTimeout(() => {
+	store.dispatch({type:'HIDE_NOTIFICATION'})
+},5000)
+
+=========
+Race Condition: 2 calls going on parallely: 2 Notofication: , first timeout finishes:it will dispatch hide notification
+You might remove the second notification first and show the first ntoification 
+IN this above Situation:
+
+Extract a function that centralizes the timeout logic and dispatches these 2 action (SHOW_NOTIFICATION,HIDE_NOTIFICATION)
+
+Solution:
+-------
+function ShowNotification(id,text) {
+	return {type:'SHOW_NOTIFICATION', id, text}
+}
+function HideNotification(id) {
+	return {type:'HIDE_NOTIFICATION', id}
+}
+let nextNotificatioId = 0;
+export function showNotificationWithTimeout(dispatch, text) {
+	const id = NextNotificationId++;
+	dispatch(ShowNotification(id,text))
+	setTimeOut(()=>{
+		dispatch(hideNotification(id))
+	},5000)
+}
+---
+Action->Thunk->Reducer
+export function showNotificationWithTimeout( text) {
+	const id = NextNotificationId++;
+	dispatch(ShowNotification(id,text))
+	setTimeOut(()=>{
+		dispatch(hideNotification(id))
+	},5000)
+}
+
+npm install --save redux-thunk
+---
+redux-promise: this is another library
+
+
+---s
+static
+are not called on instance of the class: 
+Call on class Itself
+---------------------
+
+class A extends Component{
+	static var = 0;
+}
+==============
+class A extends Component{
+	var b = 2;
+	//b = false;
+	if(b){
+
+	}
+}
+A.var = 0;
+---
+1. fetch all the value given by apis
+2. post the data

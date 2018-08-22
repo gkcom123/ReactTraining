@@ -15,6 +15,7 @@ import AddTodo from './containers/AddTodo';
 import VisibleTodoList from './containers/VisibleTodoList';
 import TodoList from './component/TodoList';
 import Footer from './component/Footer';
+import EmployeeContainer from './containers/EmployeeContainer';
 //import { FetchDemo } from './component/serviceCall/FetchDemo';
 
 
@@ -60,9 +61,11 @@ class App extends Component {
         <Notification onClose= {this.onNotificationClose} /> */}
         {/* <PureComponentDemo/> */}
         {/* <FetchDemo/> */}
-        <AddTodo />
+        {/* <AddTodo />
         <VisibleTodoList />
-        <Footer/>
+        <Footer/> */}
+        <EmployeeContainer/>
+        
       </div>
     );
   }

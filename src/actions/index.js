@@ -1,5 +1,18 @@
+import axios from 'axios';
 let nextTodoId = 0
-// any service call should happe here
+// any service call should happen here
+
+export function fetchUsers() {
+    const request = axios.get('http://jsonplaceholder.typicode.com/users');
+
+    return (dispatch) => {
+        request.then((data) => {
+            console.log(data);
+            dispatch({type:'FETCH_PROFILES', payload:data})
+        });
+    };
+}
+
 export const addTodo = text => ({
     type: 'ADD_TODO',
     id: nextTodoId++,
