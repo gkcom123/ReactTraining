@@ -1,0 +1,30 @@
+Redux thunk: return a function
+Redux promise: Retrun a promise
+function action(payload) {
+	return new Promise(function(resolve,reject){
+		resolve()
+	})
+}
+
+--
+Redux: Manage the state
+Redux Thunk: Async call
+redux Promise: Async call
+-------
+redux saga: Async call
+
+Redux-promise : Demo for this : pending
+
+-----
+Create a component
+: Stateless or statefull
+
+State management: 
+	Structure of state object
+	Managing the state: redux
+	Pass the store data to react: React-connect
+	API CALL: This is a AJAX call : Async call
+	Update the stre with Redux
+	
+
+

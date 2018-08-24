@@ -32,3 +32,4 @@ React(UI) -> MiddleWare-> THUNK->Redux (state management library)
 
 Redux Promise
 ==============
+npm install --save redux-promise

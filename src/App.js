@@ -16,6 +16,7 @@ import VisibleTodoList from './containers/VisibleTodoList';
 import TodoList from './component/TodoList';
 import Footer from './component/Footer';
 import EmployeeContainer from './containers/EmployeeContainer';
+import AsyncCall from './containers/AsyncCall';
 //import { FetchDemo } from './component/serviceCall/FetchDemo';
 
 
@@ -65,6 +66,8 @@ class App extends Component {
         <VisibleTodoList />
         <Footer/> */}
         <EmployeeContainer/>
+        
+        {/* <AsyncCall /> */}
         
       </div>
     );

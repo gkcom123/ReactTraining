@@ -5,7 +5,8 @@ import * as actions from '../actions';
 
 class EmployeeContainer extends Component {
     componentDidMount() {
-        this.props.fetchUsers();
+        // this method will be used if u r using redux-promise
+        this.props.fetchUserInPromise();
     }
     renderUser({id,name,email,company}) {
         return (
@@ -17,11 +18,16 @@ class EmployeeContainer extends Component {
     }
     render() {
         console.log('render', this.props.value);
+        if(this.props.value.user.length==0){
+            return (
+                <div>Loading......</div>
+            )
+        }
         return(
         <div>
-          <h4>Employee Dir: Redux Thunk</h4>
+          <h4>Employee Dir: Redux Promise</h4>
           <ul className="list-style">
-            {this.props.value.user.map(this.renderUser)}
+            {this.props.value.user.data.map(this.renderUser)}
           </ul>
         </div>
         );

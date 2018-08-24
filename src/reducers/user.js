@@ -1,7 +1,9 @@
 const users = (state = [] , action) =>{
     switch (action.type) {
         case 'FETCH_PROFILES':
-            return action.payload.data || state
+            console.log(action);
+            const apiResposne = {data: action.payload.data, apiStatus: action.payload.statusText};
+            return apiResposne || state
         default: 
             return state
     }
