@@ -20,6 +20,7 @@ const posts = (state = {
 }, action) => {
   switch (action.type) {
     case INVALIDATE_SUBREDDIT:
+    //Change the value of didInvalidate and return same other values of state
       return {
         ...state,
         didInvalidate: true

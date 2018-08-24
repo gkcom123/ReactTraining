@@ -4,12 +4,13 @@ import { createStore, applyMiddleware } from 'redux'
 import {Provider} from 'react-redux'
 import App from './App';
 import rootReducer from './reducers';
-//import reduxThunk from 'redux-thunk';
+import reduxThunk from 'redux-thunk';
 import promiseMiddleware from 'redux-promise';
 
 //const store = createStore(rootReducer)
-//const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
-const store = createStore(rootReducer, applyMiddleware(promiseMiddleware));
+const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
+//const store = createStore(rootReducer, applyMiddleware(promiseMiddleware));
+const store = createStoreWithMiddleware(rootReducer);
 
 const rootEl = document.getElementById('root')
 

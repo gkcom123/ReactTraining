@@ -65,9 +65,9 @@ class App extends Component {
         {/* <AddTodo />
         <VisibleTodoList />
         <Footer/> */}
-        <EmployeeContainer/>
+        {/* <EmployeeContainer/> */}
         
-        {/* <AsyncCall /> */}
+        <AsyncCall />
         
       </div>
     );

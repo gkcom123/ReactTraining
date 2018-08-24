@@ -1,0 +1,35 @@
+Redux promise: Prmose
+1. import promiseMiddleware from 'redux-promise';
+2. Create a store : 
+const store = createStore(rootReducer, applyMiddleware(promiseMiddleware));
+
+Flow of a program: 
+npm install --save redux-promise
+1. Index.js : Craete a store with the help of middleware
+const store = createStore(rootReducer, applyMiddleware(promiseMiddleware));
+2. App.js: Import the EmployeeContainer
+3. 
+EmployeeContainer.js->
+2. action.js: We call fetchUserInPromise
+3. When this api call is completed: Reducer will ge t called
+4. Reducer will change the state, And will call all its Subscriber
+5. EmployeeContainer will rerender the UI
+===================================================================
+Redux Thunk: function
+1. 
+const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
+
+const store = createStoreWithMiddleware(rootReducer)
+
+----
+Best practice
+---
+1. Define all type constant in seperate file
+2. 
+====
+Router
+Redux-form
+Testing
+---
+React,redux
+
