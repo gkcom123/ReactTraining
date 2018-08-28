@@ -1,0 +1,84 @@
+React-router: Open source library,
+
+1. Install the library
+	npm install --save react-router
+2. Explanation
+3. Demo: 4 page application
+ 
+
+ Application State management: redux
+ Navigation : react-router
+
+ Demo: 
+ Home Company AboutUs
+
+ 3 Pages: Home, Company, About Us
+ ---
+
+core routing functionality for navigation. 
+react-router-dom: for Web Application
+
+react-router-native: Mobile/React-native
+--
+Previous version
+===============
+<v3: BrowserHistory: 
+
+dashboard 
+	Customer setup: 
+		User
+			Create
+			Edit
+
+
+routes.js
+<Route path= "/createUser">User </Route>
+
+import {browserHistory} from 'react-router';
+
+broserHistory.push('');: A-B Entire page A gets unmounted (componentWillUnmount), page B gets mounted (componentDidmount)
+browserHistory.push('',param): A-B and we want to pass a parameter for page B
+					A: B (param will be in Object form){status:'success', Origin:'ghsd'}
+				Dashboard: List of entity: Click on entity: Navigate to particular page:
+				1. Navigating from page A - B: 
+					a. Page navigation: /abc: 
+					b. Carry the data : id, source: 
+				New page: B
+					1. browserHistory.param.origin as ghsd
+					)
+
+Task to DO: 
+1. broserHistory.push(: To navigate
+2. <Route>: add a new page
+3. BrowserHistory.push(path, param)
+
+Keep in Mind:
+1. BrowserHistory.push
+NotificationMessage.show: 10 sec
+setTimeout(
+browser.push ,10
+)
+
+--
+DashBoard: Add a Button: New User
+
+Create a new page: 
+	1. Routes.js
+	2. Duplicate Currency
+
+Click Handler: Navigate to this newly created page/
+------
+browserHistory. push
+import {a,b}  from react-router
+Nested Navigation:
+	/edit/{id}
+		<Route>
+			<Route>: Child page 
+		</Route>
+	/new
+	/delete
+
+      <Link to="/dashboard">Dashboard</Link>
+
+==========================
+v4: New Version
