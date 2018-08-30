@@ -1,0 +1,40 @@
+React Router V4
+---------------
+Link : used if you have static routing: NAvigation Panel : Link
+<Link to="/about/">Home</Link>
+
+<Route exact path="/" component={Home}/>
+<Route path="/about" component={About}/>
+
+1.Component can be statefull/stateless
+2. It can be in same file: No import is required
+3. It can be placed in different : Use import 
+import {Home} from '/path'
+
+LINK=>URL=>PATH=>Route=>Component
+=====
+There are 3 types of component in react-router:
+1. router 
+2. route matching component
+3. Navigation component
+
+All above should be imported from react-router-dom
+
+1. Router: Every react router application should be a router compoennt. 
+Router component: it will create a history object. 
+static file server: whenever there is a change in url pattern, It will return the componet to render. 
+2. Route Matching: 
+	<Route> and <Switch>
+
+Route matching is done by <Route>'s path prop to the current location's path name. 
+when a route matches: render the content
+If it does not match , it will render null (empty div)
+<Route> with no path: Will always match
+
+<Switch>: Will iterate over all of its children <Route> element and only render the first one which matches the current location
+Use case: when no routes match
+
+Navigation: 
+<Link> to create a link, : <a> will be renderered 
+<NavLink>
+<redirect>
