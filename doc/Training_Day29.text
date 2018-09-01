@@ -1,0 +1,31 @@
+We discussed: 
+1. URL parameter: Pass the parameter
+pass the id of the user and then navigate: Demo
+
+Previous version: BrowserHostory: 
+browserhistory.push('url',param)
+history.push: WithRouter(history): Demo
+Routes
+	<Route></Route>
+Path="/:param": : means its a parameter, url will be dynamic value with a user id. 
+/customer-user/hsfhf-hsdgf-hsd/
+
+const a = () => (<div></div>) 			equivalent to 
+const a = () => {return (<div></div>)}
+
+Ex: RouteParam.js
+----
+History part
+----
+Create a page:
+	Not Logged In
+	Public Page
+	Protected Page: Only when you r logged in 
+	When user login: How to navigate to home page after successful login:
+		Fake the login scenarion: when u click on login button, Will log in immediately.
+	Once successful login: U can get the protected page. 
+	Logout functionality 
+
+===
+Whenever you use the <Router>
+It will add location in the Props.

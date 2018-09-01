@@ -18,6 +18,7 @@ import Footer from './component/Footer';
 import EmployeeContainer from './containers/EmployeeContainer';
 import AsyncCall from './containers/AsyncCall';
 import BasicRouteEx from './router/BasicRoute';
+import ParamExamples from './router/RouteParameters';
 //import { FetchDemo } from './component/serviceCall/FetchDemo';
 
 
@@ -70,7 +71,8 @@ class App extends Component {
         
         {/* <AsyncCall /> */}
         
-        <BasicRouteEx />
+        {/* <BasicRouteEx /> */}
+        <ParamExamples />
       </div>
     );
   }
