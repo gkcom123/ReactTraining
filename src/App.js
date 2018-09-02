@@ -19,6 +19,8 @@ import EmployeeContainer from './containers/EmployeeContainer';
 import AsyncCall from './containers/AsyncCall';
 import BasicRouteEx from './router/BasicRoute';
 import ParamExamples from './router/RouteParameters';
+import AuthPage from './router/LoginRedirectDemo';
+import AmbigousMatch from './router/AmbigousRoute';
 //import { FetchDemo } from './component/serviceCall/FetchDemo';
 
 
@@ -72,7 +74,9 @@ class App extends Component {
         {/* <AsyncCall /> */}
         
         {/* <BasicRouteEx /> */}
-        <ParamExamples />
+        {/* <ParamExamples /> */}
+        {/* <AuthPage/> */}
+        <AmbigousMatch />
       </div>
     );
   }

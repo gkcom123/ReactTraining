@@ -1,10 +1,10 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Link, WithRouter, Redirect} from "react-router-dom";
-import { format } from 'path';
+import {BrowserRouter as Router, Route, Link, withRouter, Redirect} from "react-router-dom";
 
 const AuthPage = () => (
     <Router>
         <div>
+            <AuthButton />
             <ul>
                 <li>
                     <Link to="/public">Public View</Link>
@@ -15,7 +15,7 @@ const AuthPage = () => (
             </ul>
             <Route path="/public" component={PublicComponent} />
             <Route path="/login" component={LoginPage} />
-            <PrivateRoute path="/protected" component={ProtectedComponent} />
+            <PrivateRoute path="/protected" component={ProtectedComponent} id="iuiuix"  />
         </div>
     </Router>
 );
@@ -41,12 +41,40 @@ const fakeAuth = {
         setTimeout(cb,100);
     }
 };
+const AuthButton = withRouter(
+    ({history}) => 
+    fakeAuth.isAutheticated ? (
+    <p>
+        Welcome!{" "}
+        <button onClick={()=>{
+            fakeAuth.signout(()=>history.push("/public", {param:"sdhj"}));
+        }} >
+        SignOut
+        </button>
+    </p>) : (
+        <p>You are not logged in. </p>
+    )
+);
 
-const PrivateRoute = ({component:Component, ...rest}) => {
-    <Route {...rest} render={props=>fakeAuth.isAutheticated ? (<Component {...props} /> ) : 
-    (<Redirect to={{pathname:"/login",state:{from:props.location}
-    }}/>)}
-};
+const PrivateRoute = ({ component: Component, ...rest }) => { 
+    return (
+    <Route
+      {...rest}
+      render={props =>
+        fakeAuth.isAuthenticated ? (
+          <Component {...props} />
+        ) : (
+          <Redirect
+            to={{
+              pathname: "/login",
+              state: { from: props.location }
+            }}
+          />
+        )
+      }
+    />
+  )};
+
 class LoginPage extends React.Component {
     state ={
         redirectToReferer: false
@@ -73,8 +101,12 @@ class LoginPage extends React.Component {
         return (
             <div>
                 <p>Please login to view the page at {from.pathname}</p>
+                <input />
+
                 <button onClick={this.login}>Login</button>
             </div>
         )
     }
 }
+
+export default AuthPage;

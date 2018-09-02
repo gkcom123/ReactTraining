@@ -1,0 +1,32 @@
+history : WithRouter function which takes history as param
+history.push("/")
+
+<Route {...rest}
+
+<Route path="/" id="jdfgj"
+
+Ambigous Match:
+/company
+/ram
+/ancbbc
+/aboutus
+/:user
+
+Wrap in <Switch>
+/:id
+/acompany
+/kjjd
+
+/company
+
+
+<Route path={'/apples/:appleId/otherstuff/**/'} component="OtherStuffComponent"/>
+http://localhost/apples/23/otherstuff/jhdsghdfgshjdfsgjfsd/
+<Route path={'/apples/:fruidId/someotherstuff/**/'} component="SomeOtherComponent"/>
+<Route path={'/apples/:fruidId/someotherstuff/**/'} component="SomeOtherOtherComponent"/>
+
+Redux -form
+form Validation: Grey out
+Call the API
+Testing: Unit test case
+Automation test cases

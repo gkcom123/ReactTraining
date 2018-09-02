@@ -18,6 +18,7 @@ const BasicRouteEx = () => (
             <Switch>
                 <Route exact path="/" component={Home} />
                 <Route path="/about/:id" component={AboutDup} />
+                {/* http://localhost/about/635635 */}
                 <Route path="/about" component={About} />
                 <Route path="/contact" component={Contact} />
                 <Route component={NoMatch} />
