@@ -1,0 +1,49 @@
+Redux -form
+----------
+Required Field: User has to provide value
+Type validation: Fields are of NUMBER/STRING/Boolen Ex: Age: NUMBER
+Custom VAlidation: Age can not be more than 30 YR. Email id validation, name should not 
+
+Demo:
+1. Simple Form : incomplete
+2. Sync Validation 
+3. Field level Validation
+4. Async Blur Validation
+5. Submit Validation
+6. Async Chnage Validation
+--
+Lot of effort : 
+Input field: 20 
+===
+Redux-form library is used for form validation
+----
+
+1.Redux: Form validation would be redux process
+	Reducer, ActionCreator, Store.
+2. HOC: 
+	Want to make a redux form
+	<div>
+	<input >
+	<input 2/>
+	<input 2/>
+	</div>
+
+	reduxForm(store)(Component): redux-form library
+
+Flow:
+	Any change in input field: Onchange/Onblur/onFocus: ActionCreator=Reducer=>state=>rerendering of component
+
+Input (Field Component is provided by redux-form)->Change/Submit=> Redux-form Action Creator=>action=>Dispatcher=>Reducer=> State=> 
+
+=====
+Basic Example:
+Form Component : Name, Age, Gendre. Submit
+1. We have to create one reducer for Form
+2. Form Component
+3. <Fields />: OnChange,OnBlur,OnFocus,OnDrag and onDrop
+4. Form Submit
+
+==
+1st Step: 
+npm install --save redux-form
+npm install --save-dev : Dev Dependecies

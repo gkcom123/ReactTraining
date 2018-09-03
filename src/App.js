@@ -21,6 +21,7 @@ import BasicRouteEx from './router/BasicRoute';
 import ParamExamples from './router/RouteParameters';
 import AuthPage from './router/LoginRedirectDemo';
 import AmbigousMatch from './router/AmbigousRoute';
+import SimpleForm from './component/form/SimpleForm';
 //import { FetchDemo } from './component/serviceCall/FetchDemo';
 
 
@@ -38,6 +39,9 @@ class App extends Component {
       alert(' Form has been failed');
     }
     //alert('i m in parent');
+  }
+  submitCall() {
+    console.log('Submit form');
   }
   render() {
     const obj = {name:'Satish', 'Age': 25, active: true};
@@ -76,7 +80,8 @@ class App extends Component {
         {/* <BasicRouteEx /> */}
         {/* <ParamExamples /> */}
         {/* <AuthPage/> */}
-        <AmbigousMatch />
+        {/* <AmbigousMatch /> */}
+        <SimpleForm onSubmit={this.submitCall} />
       </div>
     );
   }
