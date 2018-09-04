@@ -1,0 +1,13 @@
+To capture the value:
+redux-form-website-template: this can be used to fetch all values
+Values will have all the form values
+Sync Level validation:
+	Synchronous client side
+	1. Validation function: which will take object of form values. Returns an object of error. 
+		In case of no error , we will have empty object
+	2. Use individual validator for each field
+warn: function with same type signature as validation function
+
+This happens: on Every change of form data.
+	First name is invalid: field.error
+	

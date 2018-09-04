@@ -23,6 +23,8 @@ import AuthPage from './router/LoginRedirectDemo';
 import AmbigousMatch from './router/AmbigousRoute';
 import SimpleForm from './component/form/SimpleForm';
 //import { FetchDemo } from './component/serviceCall/FetchDemo';
+import {Values} from "redux-form-website-template";
+import SyncValidationForm from './component/form/SyncValidationForm';
 
 
 class App extends Component {
@@ -41,7 +43,8 @@ class App extends Component {
     //alert('i m in parent');
   }
   submitCall() {
-    console.log('Submit form');
+    console.log('Submit form',Values);
+
   }
   render() {
     const obj = {name:'Satish', 'Age': 25, active: true};
@@ -81,7 +84,9 @@ class App extends Component {
         {/* <ParamExamples /> */}
         {/* <AuthPage/> */}
         {/* <AmbigousMatch /> */}
-        <SimpleForm onSubmit={this.submitCall} />
+        {/* <SimpleForm onSubmit={this.submitCall} /> */}
+        <SyncValidationForm onSubmit={this.submitCall} />
+        <Values form="syncForm" />
       </div>
     );
   }
