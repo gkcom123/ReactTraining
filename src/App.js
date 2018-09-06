@@ -25,6 +25,8 @@ import SimpleForm from './component/form/SimpleForm';
 //import { FetchDemo } from './component/serviceCall/FetchDemo';
 import {Values} from "redux-form-website-template";
 import SyncValidationForm from './component/form/SyncValidationForm';
+import FieldValidationForm from './component/form/FieldValidationForm';
+import AsyncValidationForm from './component/form/AsyncValidationForm';
 
 
 class App extends Component {
@@ -85,8 +87,10 @@ class App extends Component {
         {/* <AuthPage/> */}
         {/* <AmbigousMatch /> */}
         {/* <SimpleForm onSubmit={this.submitCall} /> */}
-        <SyncValidationForm onSubmit={this.submitCall} />
-        <Values form="syncForm" />
+        {/* <SyncValidationForm onSubmit={this.submitCall} /> */}
+        {/* <FieldValidationForm onSubmit={this.submitCall}/> */}
+        <AsyncValidationForm onSubmit={this.submitCall} />
+        <Values form="fieldForm" />
       </div>
     );
   }

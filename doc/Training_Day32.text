@@ -1,0 +1,32 @@
+Validation funtion will get called on touch and change.
+
+3. Field level Validation
+	Validation function: 
+		value: current value of the field
+		allValues: values of entire form
+		props: any props to form
+	value is valid: validation function returns undefined
+	====
+	There is no validation at form level. You will have validation at each field level.
+	====
+	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/
+
+
+4. Async Blur Validation
+====================
+when you want to run server side validation while the form is filled out
+Ex:tagName, username
+
+asyncValidate : function
+	parameter: object of form values
+		dispatch: redux
+		returns a promise: error or success
+-
+You also have to provide the field name.
+Blurring on every field : will trigger tha validation if we dont give the field name
+	Can be mixed: Sync and Async validation
+		If synchronous validation is failing: ASynchronous validation wont be 
+
+
+Form: username , password
+validate : 
