@@ -22,12 +22,12 @@ import ParamExamples from './router/RouteParameters';
 import AuthPage from './router/LoginRedirectDemo';
 import AmbigousMatch from './router/AmbigousRoute';
 import SimpleForm from './component/form/SimpleForm';
-//import { FetchDemo } from './component/serviceCall/FetchDemo';
+import { FetchDemo } from './component/serviceCall/FetchDemo';
 import {Values} from "redux-form-website-template";
 import SyncValidationForm from './component/form/SyncValidationForm';
 import FieldValidationForm from './component/form/FieldValidationForm';
 import AsyncValidationForm from './component/form/AsyncValidationForm';
-
+import SubmitValidation from './component/form/SubmitValidation';
 
 class App extends Component {
   constructor(props){
@@ -89,7 +89,8 @@ class App extends Component {
         {/* <SimpleForm onSubmit={this.submitCall} /> */}
         {/* <SyncValidationForm onSubmit={this.submitCall} /> */}
         {/* <FieldValidationForm onSubmit={this.submitCall}/> */}
-        <AsyncValidationForm onSubmit={this.submitCall} />
+        {/* <AsyncValidationForm onSubmit={this.submitCall} /> */}
+        <SubmitValidation />
         <Values form="fieldForm" />
       </div>
     );

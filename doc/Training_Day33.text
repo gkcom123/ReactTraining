@@ -1,0 +1,11 @@
+Fetch is not working
+Axios will have to return success/failed in service 
+return axios.get(`http://localhost:5000/api/checkUser/${values.username}`).then((response)=>{
+        if(response.data.status === 'success'){
+            throw {username: 'This user is already taken'}; 
+        }
+    })
+
+
+  asyncBlurFields:['username']}): This will define fields to validate
+  It carries all the form values in values field

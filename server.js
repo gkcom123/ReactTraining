@@ -30,6 +30,22 @@ app.use(delay(2000));
      }
      res.send(result);
  });
+ app.get('/api/checkUser/:name',(req,res)=>{
+    //console.log(req.body);
+    console.log(req.params.name);
+
+    if(['Ram','shyam'].includes(req.params.name)){
+        const foundResult = {
+            "status": "success",
+            "data": 'User is already taken'
+        }
+        res.send(foundResult);
+        }
+        else {
+        res.send({"status": "failed",
+        "data": 'User is not found'});
+    }
+});
  app.post('/api/updateUser',((req,res)=>{
      var reqObj = req.body;
      console.log(reqObj);
