@@ -1,0 +1,9 @@
+Fetch or axios APi library can beused for async validation. 
+
+Async chnage validation: 
+	Run the server side validation when form is being filled out
+
+	asynchromous validation which returns a promise : Either rejects with an object of error Or resolve
+
+Point: Async validation will be called before onsubmit
+Async validation: wont be called if any error in sync validation

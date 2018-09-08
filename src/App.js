@@ -28,6 +28,7 @@ import SyncValidationForm from './component/form/SyncValidationForm';
 import FieldValidationForm from './component/form/FieldValidationForm';
 import AsyncValidationForm from './component/form/AsyncValidationForm';
 import SubmitValidation from './component/form/SubmitValidation';
+import AsyncChangeValidation from './component/form/AsyncChangeValidation';
 
 class App extends Component {
   constructor(props){
@@ -90,7 +91,9 @@ class App extends Component {
         {/* <SyncValidationForm onSubmit={this.submitCall} /> */}
         {/* <FieldValidationForm onSubmit={this.submitCall}/> */}
         {/* <AsyncValidationForm onSubmit={this.submitCall} /> */}
-        <SubmitValidation />
+        {/* <SubmitValidation /> */}
+        <AsyncChangeValidation onSubmit={this.submitCall} />
+
         <Values form="fieldForm" />
       </div>
     );
