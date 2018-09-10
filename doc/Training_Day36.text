@@ -1,0 +1,8 @@
+    One time setup for Enzyme: 
+    Line No 78: 
+    package.json: "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.js",
+
+    To Run the test script: 
+    npm test:
+    Go over the entire drectory , Find all the files which have test.js
+    

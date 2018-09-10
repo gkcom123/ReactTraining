@@ -29,26 +29,26 @@ import FieldValidationForm from './component/form/FieldValidationForm';
 import AsyncValidationForm from './component/form/AsyncValidationForm';
 import SubmitValidation from './component/form/SubmitValidation';
 import AsyncChangeValidation from './component/form/AsyncChangeValidation';
-
+import Label from './component/Label';
 class App extends Component {
   constructor(props){
     super(props);
-    this.onNotificationClose = this.onNotificationClose.bind(this);
+    //this.onNotificationClose = this.onNotificationClose.bind(this);
   }
-  onNotificationClose(obj) {
-    console.log(obj);
-    if(obj.status==='Submitted'){
-      alert(' Form has been submitted');
-    }
-    else{
-      alert(' Form has been failed');
-    }
-    //alert('i m in parent');
-  }
-  submitCall() {
-    console.log('Submit form',Values);
+  // onNotificationClose(obj) {
+  //   console.log(obj);
+  //   if(obj.status==='Submitted'){
+  //     alert(' Form has been submitted');
+  //   }
+  //   else{
+  //     alert(' Form has been failed');
+  //   }
+  //   //alert('i m in parent');
+  // }
+  // submitCall() {
+  //   console.log('Submit form',Values);
 
-  }
+  // }
   render() {
     const obj = {name:'Satish', 'Age': 25, active: true};
     return (
@@ -83,8 +83,8 @@ class App extends Component {
         
         {/* <AsyncCall /> */}
         
-        {/* <BasicRouteEx /> */}
-        {/* <ParamExamples /> */}
+        {/* <BasicRouteEx />
+        <ParamExamples /> */}
         {/* <AuthPage/> */}
         {/* <AmbigousMatch /> */}
         {/* <SimpleForm onSubmit={this.submitCall} /> */}
@@ -92,9 +92,11 @@ class App extends Component {
         {/* <FieldValidationForm onSubmit={this.submitCall}/> */}
         {/* <AsyncValidationForm onSubmit={this.submitCall} /> */}
         {/* <SubmitValidation /> */}
-        <AsyncChangeValidation onSubmit={this.submitCall} />
+        {/* <AsyncChangeValidation onSubmit={this.submitCall} />
 
-        <Values form="fieldForm" />
+        <Values form="fieldForm" /> */}
+
+        
       </div>
     );
   }

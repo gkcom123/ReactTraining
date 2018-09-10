@@ -1,0 +1,25 @@
+Jest: Developed by Facebook, 
+
+npm install --save-dev jest
+Any file which has a *.test.js
+npm test: To run all the test cases
+
+
+
+Steps:
+Npm install : All dependendies 
+setupTests.js: Which is required to do setupTest.js
+
+----
+npm test: Run to test case
+npm test -- --coverage: To display the code coverage
+
+Test Case plan for Label:
+==============
+1.should have one label property
+2. htmlFor attrinite : It must have
+3. should have some text
+
+Standard practice: Write a test case inside a component folder
+--
+shallow: will help in shallow rendering

@@ -7,3 +7,26 @@ Async chnage validation:
 
 Point: Async validation will be called before onsubmit
 Async validation: wont be called if any error in sync validation
+
+==================
+Test Case:
+Major Approach:
+1. Unit testing: Job Of Developer to write unit test cases:
+	1. Component: Webpage : Data List, Button, DropDown, Notification Bar: 
+							Each Component should have 1 or more Test case 
+		10 Page: data List : 5 , Button : 10 , Dropdown : 6
+			How these component work Together
+2. Integration Testing
+3. Simulate the component: Website: Click Event, Disbale Button, button Click, Api call
+
+Chai, enzyme, Mocha: Open Source, Jest, Cypress: Paid, Sillenium, Cucumber  : Framework/Library
+
+Code Coverage: Test cases should cover the Code written in your Compoent: 100% But anything below 90% is not good. 
+
+Mocking: 
+---
+1. Component with Unit test case: Chai, Mocha, 
+2. Integration: Cypress/jesr
+3. Automation: Cucumber.
+
+
