@@ -5,4 +5,8 @@
     To Run the test script: 
     npm test:
     Go over the entire drectory , Find all the files which have test.js
-    
+
+---
+Mouse, Event action in component 
+--
+1. Create a snapshot: Capture UI state for each event behavior

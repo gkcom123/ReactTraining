@@ -30,6 +30,8 @@ import AsyncValidationForm from './component/form/AsyncValidationForm';
 import SubmitValidation from './component/form/SubmitValidation';
 import AsyncChangeValidation from './component/form/AsyncChangeValidation';
 import Label from './component/Label';
+import LinkDemo from './component/Link/Link';
+import MochaDemo from './component/MochaTest/MochaDemo';
 class App extends Component {
   constructor(props){
     super(props);
@@ -45,10 +47,10 @@ class App extends Component {
   //   }
   //   //alert('i m in parent');
   // }
-  // submitCall() {
-  //   console.log('Submit form',Values);
+  submitCall() {
+    console.log('Submit form',Values);
 
-  // }
+  }
   render() {
     const obj = {name:'Satish', 'Age': 25, active: true};
     return (
@@ -96,7 +98,9 @@ class App extends Component {
 
         <Values form="fieldForm" /> */}
 
-        
+        {/* <Label htmlFor='test' textLabel='This is a Label'></Label> */}
+        {/* <LinkDemo page="https://www.google.com/">Google nEw</LinkDemo> */}
+        <MochaDemo heading="Mocha test Demo" paragraph="This is a sample paragraph"/>
       </div>
     );
   }

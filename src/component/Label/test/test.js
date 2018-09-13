@@ -4,6 +4,7 @@ import {shallow} from 'enzyme';
 import Label from '../../Label';
 
 describe('<Label /> Block testing',function(){
+    //This is a actual component which you are going to test
     const component = shallow(<Label htmlFor='test' textLabel='This is a Label'></Label>);
     it('Should be a label',() =>{
         expect(component.find('label').length).toBe(1);

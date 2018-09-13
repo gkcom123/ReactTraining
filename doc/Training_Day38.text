@@ -1,0 +1,38 @@
+Mocha
+=====
+<div><h1>Mocha Test Demo</h1><p>This is a paragraph</p></div>
+
+const wrapper = shallow(<MochaDemo></MochaDemo>)
+	<div><h1>Mocha Test Demo</h1><p>This is a paragraph</p></div>
+expect(wrapper.find('h1').text()).toEqual('Mocha Test Demo'): 
+: If condtion mention is true: Mark the test case as successful
+
+wrapper.find('h1').text(): It will find the div tag-h1 -text inside h1 tag before its closing tag
+<h1>Mocha Test Demo</h1>
+
+React: 16.5 
+0.14:---15
+---
+
+Component test case:
+ 	Write all data in  a seperate stub file
+ 	Component test cases should be written for all functionality. 
+ 	Coverage should be 100%
+
+ 100% coverage: all lines of code is tested
+
+Snapshot: Generated for a partcular scenarion: Dont checkin 
+--
+Always add test library dependencies in dev dependcies section
+when we make a build: Dev dep is ignored
+
+Stub: Will contain the test cases data
+
+Always have a test case file name with below naming convention
+"testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
+      "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}"
+    ],
+
+  ---
+  

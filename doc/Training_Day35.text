@@ -23,3 +23,4 @@ Test Case plan for Label:
 Standard practice: Write a test case inside a component folder
 --
 shallow: will help in shallow rendering
+---

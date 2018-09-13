@@ -1,0 +1,53 @@
+Link.test.js
+We are testing the event based cases
+Click event , mouse hover etc
+--
+Cretaes a snapshot
+match the snapshot details with the given value
+
+expect(tree).toMatchSnapshot();:
+Create a snapshot file .snap
+then it will match with the component u have writted
+
+----
+Mocha: Javascript Test framework, runs on node.js 
+	: Asynchronous call testing
+Support
+1. Async support
+2. Performance testing: variable leak detection, async test , coverage , 
+
+--
+Project: Cypress
+Mocha, Expect, Enzyme
+
+Mocha: To organize and execute test
+Ex:
+	describe('Sample test script',() => {
+		it('test data 1',() => {
+			expect();
+		})
+		it('Error  data 1',() => {
+			expect();
+			// expect(user.name).toEqual('Demouser')
+
+			==>True
+		})
+	})
+
+Mocha + Enzyme + Expect+ Cypress
+---
+ Enzyme + Expect+ Cypress
+ =====
+ Complex component:
+
+ List  : 
+ 	Segregate this component :
+ 		Combine all the below the test cases
+ 		Line: Is a compoennt
+ 			<Label and <Button>
+ 				For This you can write a simple test cases. 
+ 			each row is component : 
+ 				Label/Button/Dropdown
+ 					DropDown: Label, Button
+ 					Write a test case for this component 
+ Tree
