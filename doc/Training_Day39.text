@@ -1,0 +1,18 @@
+Debug the code
+===
+1. Run time 
+2. Console.log
+3. Debug in browser
+Logging : 
+
+install the chrome web extension in your chrome browser
+chrome://extensions/
+Install the React Developer tools: Add to Chrome in web Extension
+After restart: new Tab under inspect 
+
+Install redux: Wen extension
+
+React Toolbox: Tool used to create the component
+http://react-toolbox.io/#/components
+Elements: Html Code
+React: Component structure code
